@@ -45,13 +45,15 @@ public class AddToList extends HttpServlet {
 		        String type = request.getParameter("type");
 		        String assignmentdate = request.getParameter("assignmentdate");
 		        String grade = request.getParameter("grade");
+		        String stuclass = request.getParameter("stuclass");
 
-		String sql = "insert into student values(null, \'"+studentid+"\' ,\'"+assignmentname+"\' ,\'"+type+"\' ,\'"+assignmentdate+"\' ,"+grade+")";
+		String sql = "insert into student values(null, \'"+studentid+"\' ,\'"+assignmentname+"\' ,\'"+type+"\' ,\'"+assignmentdate+"\' ,"+grade+", "+stuclass+")";
 		System.out.println(sql);
         PreparedStatement preStatement = conn.prepareStatement(sql);
 		preStatement.executeQuery();
 		
 		request.setAttribute("studentid", studentid);
+		request.setAttribute("stuclass", stuclass);
 		request.setAttribute("assignmentname", assignmentname);
 		request.setAttribute("type", type);
 		request.setAttribute("assignmentdate", assignmentdate);

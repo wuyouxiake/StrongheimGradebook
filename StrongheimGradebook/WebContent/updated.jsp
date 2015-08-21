@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Gradebook</title>
+  <title>Weights Updated</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -24,9 +24,25 @@
     </div>
   </div>
 </nav>
-<div class="container">
-<p>${studentavg}</p>         
-  
-</div>
+<h1>Successful!</h1>
+<table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Homework: </th>
+        <th>Quiz: </th>
+        <th>Test: </th>
+        <th>Project: </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>${homework}</td>
+        <td>${quiz}</td>
+        <td>${test}</td>
+        <td>${project}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a href="index.jsp">Go back to home page</a>
 </body>
 </html>

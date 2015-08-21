@@ -7,46 +7,54 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+<style> 
+#panel, #flip{
+    padding: 5px;
+    text-align: left;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    width: 200px
+}
+
+#panel {
+    padding: 40px;
+    display: none;
+     width: 200px
+}
+
+</style>
 </head>
 <body>
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">Mackleberry</a>
+      <a class="navbar-brand" href="index.jsp">Strongheim</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
          <li><a href="GetList">Current List</a></li>
         <li><a href="form.jsp">Add Record</a></li>
+        <li><a href="changeweight.jsp">Change Weight</a></li>
+        <li><a href="search.jsp">Summary by Student</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
-<div class="container">
+ <div class="container">
   <h3>Welcome to Professor Strongheim's Gradebook</h3>
-</div>
-<form action="allavg" method="get">
-	<input type="hidden" name="action" value="homework">
-	<input type="submit" value="Homework AVG" id="submit">
-</form>
+</div> 
+  
+<div id="flip">Assignment List(All Student)</div>
 
-<form action="allavg" method="get">
-	<input type="hidden" name="action" value="quiz">
-	<input type="submit" value="Quiz AVG" id="submit">
-</form>
-
-<form action="allavg" method="get">
-	<input type="hidden" name="action" value="test">
-	<input type="submit" value="Test AVG" id="submit">
-</form>
-
-<form action="allavg" method="get">
-	<input type="hidden" name="action" value="project">
-	<input type="submit" value="Project AVG" id="submit">
-</form>
-<br>
+<div id="panel">
 <form action="allassignment" method="get">
 	<input type="hidden" name="action" value="homework">
 	<input type="submit" value="All Homework" id="submit">
@@ -66,6 +74,34 @@
 	<input type="hidden" name="action" value="project">
 	<input type="submit" value="All Project" id="submit">
 </form>
+</div>
+  
+
+<form action="allavg" method="get">
+	<input type="hidden" name="action" value="homework">
+	<input type="submit" value="Homework AVG" id="submit">
+</form>
+
+<form action="allavg" method="get">
+	<input type="hidden" name="action" value="quiz">
+	<input type="submit" value="Quiz AVG" id="submit">
+</form>
+
+<form action="allavg" method="get">
+	<input type="hidden" name="action" value="test">
+	<input type="submit" value="Test AVG" id="submit">
+</form>
+
+<form action="allavg" method="get">
+	<input type="hidden" name="action" value="project">
+	<input type="submit" value="Project AVG" id="submit">
+</form>
+
+
+  
+  
+
+
 
 
 //highst and lowest homework

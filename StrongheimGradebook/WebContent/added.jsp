@@ -12,13 +12,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">Mackleberry</a>
+      <a class="navbar-brand" href="index.jsp">Strongheim</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
          <li><a href="GetList">Current List</a></li>
         <li><a href="form.jsp">Add Record</a></li>
-        <li><a href="GetAvg">Avg Grade</a></li>
+         <li><a href="changeweight.jsp">Change Weight</a></li>
+        <li><a href="search.jsp">Summary by Student</a></li>
       </ul>
     </div>
   </div>
@@ -28,6 +29,7 @@
     <thead>
       <tr>
         <th>Student ID: </th>
+        <th>Class: </th>
         <th>Assignment Name: </th>
         <th>Assignment Type: </th>
         <th>Date: </th>
@@ -37,6 +39,7 @@
     <tbody>
       <tr>
         <td>${studentid}</td>
+        <td>${stuclass}</td>
         <td>${assignmentname}</td>
         <td>${type}</td>
         <td>${assignmentdate}</td>

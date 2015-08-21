@@ -12,12 +12,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.jsp">Mackleberry</a>
+      <a class="navbar-brand" href="index.jsp">Strongheim</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
          <li><a href="GetList">Current List</a></li>
         <li><a href="form.jsp">Add Record</a></li>
+        <li><a href="changeweight.jsp">Change Weight</a></li>
+        <li><a href="search.jsp">Summary by Student</a></li>
       </ul>
     </div>
   </div>

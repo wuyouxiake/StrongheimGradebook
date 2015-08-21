@@ -18,15 +18,29 @@
       <ul class="nav navbar-nav">
          <li><a href="GetList">Current List</a></li>
         <li><a href="form.jsp">Add Record</a></li>
-        <li><a href="changeweight.jsp">Change Weight</a></li>
-        <li><a href="search.jsp">Summary by Student</a></li>
+         <li><a href="changeweight.jsp">Change Weight</a></li>
+         <li><a href="search.jsp">Summary by Student</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container">
-<p>${studentavg}</p>         
-  
+  <h2>Search For Student By ID</h2>
+  <form class="form-horizontal" role="form" method="get" action="getStudentSummary">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="studentid">Student ID: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="studentid" placeholder="Enter Student ID" name="studentid" required>
+      </div>
+    </div>
+    
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" value="Submit" id="submit">
+      </div>
+    </div>
+  </form>
 </div>
+
 </body>
 </html>

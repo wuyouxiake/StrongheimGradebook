@@ -51,7 +51,6 @@ public class studentavg extends HttpServlet {
 				sql = "select avg(grade) as avg from student where studentid = "+studentID;
 			}
 			
-			System.out.println(sql);
 			PreparedStatement preStatement = conn.prepareStatement(sql);
 			ResultSet result = preStatement.executeQuery();
 			
